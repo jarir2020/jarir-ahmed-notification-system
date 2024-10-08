@@ -1,0 +1,20 @@
+{
+    "name": "jarir-ahmed/notification-system",
+    "description": "A simple notification system to display messages on the front end.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jarir Ahmed",
+            "email": "jarircse16@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JarirAhmed\\NotificationSystem\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2"
+    }
+}
