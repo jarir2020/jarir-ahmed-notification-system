@@ -1,27 +1,29 @@
+
 .notification {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
-    display: none; /* Hidden by default */
     color: white;
-    z-index: 9999;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
 }
 
-.notification.success {
+.success {
     background-color: green;
 }
 
-.notification.warning {
+.warning {
     background-color: yellow;
-    color: black; /* Text color for yellow background */
+    color: black; /* Change text color for visibility */
 }
 
-.notification.error {
+.error {
     background-color: red;
 }
 
-.notification.info {
+.info {
     background-color: blue;
 }
+
