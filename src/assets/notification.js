@@ -1,21 +1,19 @@
 function showNotification(type, message) {
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.innerText = message;
+    // Create a notification div
+    var notification = document.createElement('div');
+    notification.className = 'notification ' + type; // Add type class
+    notification.innerHTML = message;
+
+    // Append notification to body
     document.body.appendChild(notification);
 
-    // Show the notification
-    notification.style.display = 'block';
+    // Display the notification
+    $(notification).fadeIn();
 
     // Remove the notification after 3 seconds
-    setTimeout(() => {
-        notification.style.display = 'none';
-        document.body.removeChild(notification);
+    setTimeout(function () {
+        $(notification).fadeOut(function () {
+            this.remove(); // Remove the element from the DOM
+        });
     }, 3000);
 }
-
-// Example usage
-// showNotification('success', 'This is a success message.');
-// showNotification('warning', 'This is a warning message.');
-// showNotification('error', 'This is an error message.');
-// showNotification('info', 'This is an informational message.');
