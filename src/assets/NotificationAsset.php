@@ -6,13 +6,14 @@ use yii\web\AssetBundle;
 
 class NotificationAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    // Use the correct alias for the directory where your assets are located
+    public $sourcePath = '@vendor/jarir-ahmed/notification-system/src/assets';
+    
     public $css = [
-        'css/notification.css', // Path to your CSS file
+        'css/notification.css',
     ];
     public $js = [
-        'js/notification.js', // Path to your JS file where showNotification is defined
+        'js/notification.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
