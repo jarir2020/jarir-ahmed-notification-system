@@ -12,18 +12,18 @@ class Notification
     const ERROR = 'error';
     const INFO = 'info';
 
-    public function __construct($type, $message)
+    public static function __construct($type, $message)
     {
         $this->type = $type;
         $this->message = $message;
     }
 
-    public function getType()
+    public static function getType()
     {
         return $this->type;
     }
 
-    public function getMessage()
+    public static function getMessage()
     {
         return $this->message;
     }
